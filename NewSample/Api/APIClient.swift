@@ -48,7 +48,7 @@ enum Router: URLRequestConvertible {
             }
         }()
         
-        let URLRequest = NSMutableURLRequest(URL: URL!.URLByAppendingPathComponent(path))
+        let URLRequest = NSMutableURLRequest(URL: URL!.URLByAppendingPathComponent(path)!)
         URLRequest.HTTPMethod = method
         let encoding = Alamofire.ParameterEncoding.URL
         print("encode:\(encoding.encode(URLRequest, parameters: parameters).0)")
